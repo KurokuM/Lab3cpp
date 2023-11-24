@@ -45,10 +45,10 @@ public:
     Complex(T r, T i) : real(r), imag(i) {}
 
     void setFromInput() {
-        std::cout << "Introduceti partea reala: ";
+        std::cout << "Introdu partea reala: ";
         std::cin >> real;
 
-        std::cout << "Introduceti partea imaginara: ";
+        std::cout << "Introdu partea imaginara: ";
         std::cin >> imag;
     }
 
@@ -82,10 +82,10 @@ public:
         std::copy(values.begin(), values.end(), data);
     }
 
-    // Constructor fără argumente
+    // Constructor fara argumente
     Array() = default;
 
-    // Metoda pentru setarea valorilor de la tastatură
+    // Valorile de la tastatura
     void setValues() {
         for (int i = 0; i < Size; ++i) {
             std::cout << "Introdu o valoare : ";
@@ -111,17 +111,17 @@ public:
 
  
 
-    // Funcția membru size
+    // Functia membru size
     int size() const {
         return Size;
     }
 
-    // Funcția membru fill
+    // Functia membru fill
     void fill(const T& value) {
         std::fill(data, data + Size, value);
     }
 
-    // Operatorul de inserare în flux
+    // Operatorul de inserare in flux
     friend std::ostream& operator<<(std::ostream& os, const Array& arr) {
         os << "[ ";
         for (int i = 0; i < Size; ++i) {
@@ -131,7 +131,7 @@ public:
             }
         }
         os << " ]";
-        os.flush(); // Golește buffer-ul de ieșire pentru a asigura afișarea imediată
+        os.flush(); 
         return os;
     }
 };
