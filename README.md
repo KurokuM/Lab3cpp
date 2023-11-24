@@ -123,15 +123,14 @@ public:
 
     // Operatorul de inserare in flux
     friend std::ostream& operator<<(std::ostream& os, const Array& arr) {
-        os << "[ ";
+
         for (int i = 0; i < Size; ++i) {
             os << arr.data[i];
             if (i < Size - 1) {
                 os << ", ";
             }
         }
-        os << " ]";
-        os.flush(); 
+
         return os;
     }
 };
